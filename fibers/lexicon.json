@@ -1,0 +1,42 @@
+{
+  "fiber": "lexicon",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Prefer ordinary contemporary General American English where it preserves technical meaning, while keeping canonical 561 terms when their distinction matters.",
+  "preferred": [
+    {
+      "insteadOf": "in order to",
+      "use": "to",
+      "condition": "when meaning is unchanged"
+    },
+    {
+      "insteadOf": "due to the fact that",
+      "use": "because",
+      "condition": "when stating cause"
+    },
+    {
+      "insteadOf": "has the ability to",
+      "use": "can",
+      "condition": "when stating capability"
+    },
+    {
+      "insteadOf": "at this point in time",
+      "use": "now",
+      "condition": "when referring to the present"
+    },
+    {
+      "insteadOf": "in the event that",
+      "use": "if",
+      "condition": "when stating a condition"
+    }
+  ],
+  "doNotFlatten": [
+    "canonical office and service names",
+    "formal mathematical or protocol terms",
+    "legal defined terms and operative modal verbs",
+    "measurement units and named methods",
+    "explicit epistemic-status labels",
+    "source quotations and identifiers"
+  ],
+  "ambiguityPolicy": "When an ordinary synonym would erase a real technical distinction, keep the specialist term and explain it at first consequential use."
+}
