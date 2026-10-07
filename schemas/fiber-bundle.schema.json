@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:561:ptgae:fiber-bundle:0.1.0",
+  "title": "PTGAE Selected Fiber Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bundleVersion",
+    "request",
+    "selectedAt",
+    "fibers",
+    "receipt"
+  ],
+  "properties": {
+    "bundleVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request": {
+      "$ref": "fiber-request.schema.json"
+    },
+    "selectedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "fibers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claimStatus",
+        "register",
+        "accessibility",
+        "sourcePreservation"
+      ],
+      "properties": {
+        "claimStatus": {
+          "type": "object"
+        },
+        "register": {
+          "type": "object"
+        },
+        "accessibility": {
+          "type": "object"
+        },
+        "sourcePreservation": {
+          "type": "object"
+        },
+        "lexicon": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "terminology": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "localization": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "generationConstraints": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "lintRules": {
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "safeRewriteRules": {
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bundleVersion",
+        "fiberVersions",
+        "requestHash"
+      ],
+      "properties": {
+        "bundleVersion": {
+          "type": "string"
+        },
+        "fiberVersions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "requestHash": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exceptionsApplied": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
