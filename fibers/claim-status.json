@@ -1,0 +1,98 @@
+{
+  "fiber": "claim-status",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Encode epistemic and normative status directly so prose does not need ceremonial hedging.",
+  "selection": {
+    "axis": "claimStatus",
+    "required": true
+  },
+  "statuses": [
+    {
+      "id": "observed",
+      "label": "Observed",
+      "meaning": "A directly witnessed event or state.",
+      "rendering": "Observed: {claim}"
+    },
+    {
+      "id": "measured",
+      "label": "Measured",
+      "meaning": "A value or state produced by a stated measurement method at a stated time.",
+      "rendering": "Measured: {claim}"
+    },
+    {
+      "id": "inferred",
+      "label": "Inferred",
+      "meaning": "A conclusion derived from stated evidence or observations.",
+      "rendering": "Inferred: {claim}"
+    },
+    {
+      "id": "hypothesis",
+      "label": "Hypothesis",
+      "meaning": "A testable explanatory claim that is not established as observation or measurement.",
+      "rendering": "Hypothesis: {claim}"
+    },
+    {
+      "id": "model",
+      "label": "Model",
+      "meaning": "A claim made within a named model or formal representation.",
+      "rendering": "Model: {claim}"
+    },
+    {
+      "id": "proposed",
+      "label": "Proposed",
+      "meaning": "A design, policy, architecture, action, or interpretation offered for consideration or adoption.",
+      "rendering": "Proposed: {claim}"
+    },
+    {
+      "id": "required",
+      "label": "Required",
+      "meaning": "A claim imposed by an accepted requirement, rule, contract, or governing authority.",
+      "rendering": "Required: {claim}"
+    },
+    {
+      "id": "intended",
+      "label": "Intended",
+      "meaning": "A declared target state or effect whose realization is not yet established.",
+      "rendering": "Intended: {claim}"
+    },
+    {
+      "id": "simulated",
+      "label": "Simulated",
+      "meaning": "A result produced by simulation rather than direct observation of the target system.",
+      "rendering": "Simulated: {claim}"
+    },
+    {
+      "id": "unverified",
+      "label": "Unverified",
+      "meaning": "A received claim for which the office has not obtained the required independent verification.",
+      "rendering": "Unverified: {claim}"
+    },
+    {
+      "id": "disputed",
+      "label": "Disputed",
+      "meaning": "A claim for which relevant evidence or authorities materially conflict.",
+      "rendering": "Disputed: {claim}"
+    },
+    {
+      "id": "deprecated",
+      "label": "Deprecated",
+      "meaning": "A term, rule, claim, or resource retained for provenance but no longer canonical for new use.",
+      "rendering": "Deprecated: {claim}"
+    },
+    {
+      "id": "unknown",
+      "label": "Unknown",
+      "meaning": "The required observation or evidence is missing or inaccessible.",
+      "rendering": "Unknown: {claim}"
+    }
+  ],
+  "rules": [
+    "State the proposition after the compact status label.",
+    "Do not add a second paragraph that restates the same uncertainty in softer language.",
+    "Unknown is not false and is not zero.",
+    "Unverified is not disputed unless conflicting evidence exists.",
+    "Proposed and intended do not imply deployed or completed.",
+    "Model and simulated claims name the model or simulation when context does not already make it explicit."
+  ]
+}
