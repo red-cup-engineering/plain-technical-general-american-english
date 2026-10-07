@@ -80,6 +80,13 @@
             "array",
             "null"
           ]
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Requested or normative fibers not loaded for this selection. Missing resources stay explicit."
         }
       }
     },
@@ -106,6 +113,30 @@
           "minLength": 1
         },
         "exceptionsApplied": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceCanonicality": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "terminologyVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "missingFibers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warnings": {
           "type": "array",
           "items": {
             "type": "string"
