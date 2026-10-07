@@ -87,6 +87,24 @@
             "type": "string"
           },
           "description": "Requested or normative fibers not loaded for this selection. Missing resources stay explicit."
+        },
+        "syntaxDirectness": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "surfaceForm": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "corpusCanonicality": {
+          "type": [
+            "object",
+            "null"
+          ]
         }
       }
     },
@@ -141,6 +159,13 @@
           "items": {
             "type": "string"
           }
+        },
+        "resourceHashes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Optional content hashes for loaded fiber resources when the runtime exposes them."
         }
       }
     }
