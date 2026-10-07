@@ -1,0 +1,89 @@
+{
+  "fiber": "registers",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Select PTGAE voice constraints by audience and content class without changing substantive authority.",
+  "registers": [
+    {
+      "id": "executive",
+      "use": "Board and executive decisions, directives, briefs, and receipts.",
+      "rules": [
+        "Lead with the decision, requirement, result, or blocker.",
+        "Name the responsible office or actor when known.",
+        "Put evidence and caveats after the operative statement unless they change its meaning."
+      ]
+    },
+    {
+      "id": "technical",
+      "use": "Engineering, operations, runtime, API, architecture, and implementation prose.",
+      "rules": [
+        "Name concrete systems, interfaces, inputs, outputs, versions, and failure boundaries.",
+        "Prefer verbs that describe actual state changes.",
+        "Keep provider failure, connector failure, harness failure, and application failure distinct."
+      ]
+    },
+    {
+      "id": "scientific",
+      "use": "Research, theory, measurements, models, hypotheses, and assay prose.",
+      "rules": [
+        "Use compact claim-status labels when evidence class matters.",
+        "Name measurement/model/assay context.",
+        "Do not replace uncertainty with vague modality; say what is unknown or unverified."
+      ]
+    },
+    {
+      "id": "legal-compliance",
+      "use": "Legal, regulatory, contractual, policy, and compliance text.",
+      "rules": [
+        "Preserve defined terms and operative modal verbs.",
+        "Do not simplify away scope, conditions, exceptions, or rights.",
+        "Require substantive-owner review before final acceptance."
+      ]
+    },
+    {
+      "id": "public-service",
+      "use": "Public-facing service instructions, civic information, and public-resource explanations.",
+      "rules": [
+        "Use ordinary words unless the technical term is needed.",
+        "State what the person can do, what happens next, and any required condition.",
+        "Explain internal 561 terms the audience must understand."
+      ]
+    },
+    {
+      "id": "customer",
+      "use": "Customer-facing product, support, account, and service text.",
+      "rules": [
+        "State the product or service effect directly.",
+        "Keep price, eligibility, limits, timing, and next action explicit.",
+        "Do not hide limitations in generic marketing language."
+      ]
+    },
+    {
+      "id": "product",
+      "use": "Product UI, onboarding, settings, errors, and feature documentation.",
+      "rules": [
+        "Use short action-oriented labels.",
+        "Name the affected object and consequence in error messages.",
+        "Do not use celebration or apology filler when a concrete next action exists."
+      ]
+    },
+    {
+      "id": "media-editorial",
+      "use": "News, articles, publication copy, scripts, and editorial products.",
+      "rules": [
+        "Distinguish reported fact, analysis, quotation, and interpretation.",
+        "Preserve source voice in quotations.",
+        "Do not turn editorial uncertainty into empty both-sides framing."
+      ]
+    },
+    {
+      "id": "internal-operational",
+      "use": "Runbooks, work orders, handoffs, pulse receipts, and internal coordination.",
+      "rules": [
+        "State current state, requested effect, receiver, acceptance, and wake.",
+        "Avoid narrative recap when a typed receipt can carry the state.",
+        "Use internal terms only when they resolve to canonical meanings for the receiver."
+      ]
+    }
+  ]
+}
