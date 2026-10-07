@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:561:ptgae:fiber-request:0.1.0",
+  "title": "PTGAE Fiber Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bundleVersion",
+    "audience",
+    "contentClass",
+    "locale",
+    "register",
+    "claimStatus",
+    "accessibilityProfile"
+  ],
+  "properties": {
+    "bundleVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contentClass": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locale": {
+      "type": "string",
+      "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+    },
+    "register": {
+      "enum": [
+        "executive",
+        "technical",
+        "scientific",
+        "legal-compliance",
+        "public-service",
+        "customer",
+        "product",
+        "media-editorial",
+        "internal-operational"
+      ]
+    },
+    "claimStatus": {
+      "enum": [
+        "Observed",
+        "Measured",
+        "Inferred",
+        "Hypothesis",
+        "Model",
+        "Proposed",
+        "Required",
+        "Intended",
+        "Simulated",
+        "Unverified",
+        "Disputed",
+        "Deprecated",
+        "Unknown"
+      ]
+    },
+    "accessibilityProfile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "terminologyVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "exceptionIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  }
+}
