@@ -1,12 +1,12 @@
 {
   "fiber": "lexicon",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "language": "en-US",
   "purpose": "Prefer ordinary contemporary General American English where it preserves technical meaning. Resolve dense 561 terms through canonical resources before generation; this lexicon is not a synonym bank.",
   "preferred": [
     {"insteadOf":"in order to","use":"to","condition":"when meaning is unchanged"},
     {"insteadOf":"due to the fact that","use":"because","condition":"when stating cause"},
-    {"insteadOf":"has the ability to","use":"can","condition":"when stating capability"},
+    {"insteadOf":"has the ability to","use":"can","condition":"when capability is the intended meaning"},
     {"insteadOf":"at this point in time","use":"now","condition":"when referring to the present"},
     {"insteadOf":"in the event that","use":"if","condition":"when stating a condition"}
   ],
@@ -30,7 +30,8 @@
       "Keep deprecated aliases as provenance and search keys; do not generate them as current canonical prose.",
       "If a term cannot be resolved, mark it unresolved and keep the term instead of inventing a definition."
     ],
-    "movementWorkRef": "ni:///sha-256;m-TowR6adp0h_uOYMo922RgWnNrACaW5GJjI6ytU3LQ"
+    "movementWorkRef": "ni:///sha-256;VoimIhOnHfvbRe3Qei3Vgrneu2RCOSxJKNMpCzZ0UY4",
+    "servesAim": "ni:///sha-256;rnXJn9KLi_aZCeRBKm9tYs92kjMuNVluA4fbmCrsujU"
   },
   "invariants": [
     "A semantic gloss is not a substitute for its canonical source.",
