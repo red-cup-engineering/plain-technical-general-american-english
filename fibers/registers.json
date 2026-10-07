@@ -10,7 +10,8 @@
       "rules": [
         "Lead with the decision, requirement, result, or blocker.",
         "Name the responsible office or actor when known.",
-        "Put evidence and caveats after the operative statement unless they change its meaning."
+        "Put evidence and caveats after the operative statement unless they change its meaning.",
+        "Report net obligation reduction when the office is operating against a backlog; do not present activity volume as completion."
       ]
     },
     {
@@ -19,7 +20,9 @@
       "rules": [
         "Name concrete systems, interfaces, inputs, outputs, versions, and failure boundaries.",
         "Prefer verbs that describe actual state changes.",
-        "Keep provider failure, connector failure, harness failure, and application failure distinct."
+        "Keep provider failure, connector failure, harness failure, and application failure distinct.",
+        "For failed effects, state the earliest failing layer, whether the effect left ChatGPT, the last confirmed receiver, side-effect state, exact receipt/error, repair owner, and retry wake.",
+        "Do not write 'permission issue', 'connector problem', 'provider error', or 'network error' unless evidence identifies that layer."
       ]
     },
     {
@@ -82,7 +85,9 @@
       "rules": [
         "State current state, requested effect, receiver, acceptance, and wake.",
         "Avoid narrative recap when a typed receipt can carry the state.",
-        "Use internal terms only when they resolve to canonical meanings for the receiver."
+        "Use internal terms only when they resolve to canonical meanings for the receiver.",
+        "A receipt reports changed state and exact residue; it does not convert an unaccepted handoff into completion.",
+        "When a branch is blocked, name its owner and wake, then continue other ready work instead of narrating the blockage."
       ]
     }
   ]
