@@ -1,0 +1,27 @@
+{
+  "fiber": "generation-constraints",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Constrain PTGAE generation so direct technical prose is produced before post-generation cleanup.",
+  "required": [
+    "State the proposition before ceremonial caveats.",
+    "Use canonical terminology resources rather than imitating frequent raw-corpus wording.",
+    "Encode material epistemic status with the selected claim-status fiber.",
+    "Name the acting subject and action when they are known.",
+    "Keep failure layers and repair ownership explicit in technical and operational prose."
+  ],
+  "forbiddenFamilies": [
+    "ritual throat-clearing",
+    "stacked uncertainty markers",
+    "generic balanced-opposition framing",
+    "managerial abstraction without an actor or effect",
+    "generic significance claims without evidence",
+    "conclusion labels that merely repeat preceding text",
+    "generic service-section boilerplate used in place of actual scope"
+  ],
+  "sourcePolicy": {
+    "canonicalExamples": ["accepted PTGAE resources", "reviewed exemplars", "canonical terminology"],
+    "excludeFromHouseStyleLearning": ["unreviewed generated drafts", "known tonal-poison examples", "deprecated terminology outside provenance"]
+  },
+  "boundary": "These constraints govern language form. They do not grant factual, scientific, legal, financial, safety, publication, or product authority."
+}
