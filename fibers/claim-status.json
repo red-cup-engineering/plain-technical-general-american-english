@@ -93,6 +93,15 @@
     "Unknown is not false and is not zero.",
     "Unverified is not disputed unless conflicting evidence exists.",
     "Proposed and intended do not imply deployed or completed.",
-    "Model and simulated claims name the model or simulation when context does not already make it explicit."
-  ]
+    "Model and simulated claims name the model or simulation when context does not already make it explicit.",
+    "When a proposition has a controlled status, do not restate the same status with may, might, could, appears, seems, potentially, possibly, or similar ceremonial modality unless the modal changes the proposition itself.",
+    "A safety, legal, or similarly consequential limitation may precede the proposition when delaying it would materially mislead the reader."
+  ],
+  "renderingPolicy": {
+    "propositionFirst": true,
+    "statusLabelPlacement": "prefix-when-material",
+    "redundantHedging": "forbidden",
+    "evidenceAttachment": "Name the measurement, observation, model, simulation, or source when the status cannot be recovered from local context.",
+    "failureBoundary": "Unknown names missing evidence; Unverified names missing verification; Disputed requires actual conflicting evidence."
+  }
 }
