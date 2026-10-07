@@ -1,0 +1,42 @@
+{
+  "fiber": "corpus-canonicality",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Prevent accidental house style from emerging because generated or legacy prose is frequent in the corpus.",
+  "states": {
+    "canonical": "Ratified language resource or terminology source for new generation.",
+    "accepted": "Reviewed content accepted for its owning use; eligible as an exemplar only inside that scope.",
+    "generatedDraft": "Machine-produced text not yet accepted; never a house-style authority.",
+    "quotedSource": "Source voice preserved for evidence; not house prose.",
+    "deprecated": "Retained for provenance but excluded from new canonical generation.",
+    "unknown": "Canonicality has not been established."
+  },
+  "selectionOrder": [
+    "canonical",
+    "accepted"
+  ],
+  "exclusions": [
+    "generatedDraft",
+    "deprecated",
+    "unknown"
+  ],
+  "rules": [
+    "Frequency does not promote a resource to canonical.",
+    "A repeated defect is evidence for a generator/template investigation, not a style vote.",
+    "Training, retrieval, prompting, and few-shot selection prefer canonical language fibers and reviewed exemplars over raw nearest-neighbor prose.",
+    "Quoted source can inform facts or voice attribution but cannot silently become 561 house style.",
+    "When canonicality is unknown, keep it explicit instead of inventing acceptance."
+  ],
+  "currentEvidence": [
+    {
+      "pattern": "maintains knowledge and practices for this service domain",
+      "liveMatches": 37,
+      "disposition": "known systemic scaffold debt; exclude from exemplars"
+    },
+    {
+      "pattern": "Its material is organized by artifact role under content/; specialized subdomains continue under services/.",
+      "liveMatches": 56,
+      "disposition": "generator/scaffold signature; investigate source rather than imitate"
+    }
+  ]
+}
