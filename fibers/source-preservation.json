@@ -1,0 +1,73 @@
+{
+  "fiber": "source-preservation",
+  "version": "0.1.0",
+  "purpose": "Define content classes that PTGAE analysis and rewrite systems must preserve or treat as separately authorized material.",
+  "classes": [
+    {
+      "id": "quotation",
+      "defaultAction": "preserve",
+      "rules": [
+        "Do not rewrite quoted source as house prose.",
+        "A translation or quotation correction is a separate operation with source/version provenance."
+      ]
+    },
+    {
+      "id": "code",
+      "defaultAction": "preserve",
+      "rules": [
+        "Do not rewrite code, fenced code, inline code, command syntax, data literals, or programming-language identifiers."
+      ]
+    },
+    {
+      "id": "identifier",
+      "defaultAction": "preserve",
+      "rules": [
+        "Do not rewrite package names, repository names, URIs, work_ref values, issue/PR IDs, hashes, schema keys, file paths, API fields, or protocol tokens."
+      ]
+    },
+    {
+      "id": "citation",
+      "defaultAction": "preserve",
+      "rules": [
+        "Do not alter source titles, author names, URLs, DOIs, quoted titles, or citation locators as a style rewrite."
+      ]
+    },
+    {
+      "id": "formal-notation",
+      "defaultAction": "preserve",
+      "rules": [
+        "Do not rewrite equations, mathematical symbols, formal grammar, logical formulae, or defined notation outside the owning formal system."
+      ]
+    },
+    {
+      "id": "epistemic-status",
+      "defaultAction": "preserve",
+      "rules": [
+        "Do not remove or upgrade explicit Observed, Measured, Inferred, Hypothesis, Model, Proposed, Required, Intended, Simulated, Unverified, Disputed, Deprecated, or Unknown status without evidence/authority."
+      ]
+    },
+    {
+      "id": "defined-term",
+      "defaultAction": "preserve-unless-terminology-migration",
+      "rules": [
+        "A canonical terminology migration may change a defined term only with old/new term, scope, authority, aliases, affected consumers, and acceptance state."
+      ]
+    },
+    {
+      "id": "ordinary-house-prose",
+      "defaultAction": "analyze-and-allow-listed-rewrite",
+      "rules": [
+        "Only semantics-preserving transformations authorized by the selected PTGAE bundle may run automatically.",
+        "Other findings remain lint/editor/substantive-owner review."
+      ]
+    }
+  ],
+  "receiptRequirements": [
+    "sourceVersion",
+    "contentClass",
+    "ruleId",
+    "before",
+    "after",
+    "changed"
+  ]
+}
