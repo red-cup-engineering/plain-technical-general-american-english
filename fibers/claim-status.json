@@ -103,5 +103,33 @@
     "redundantHedging": "forbidden",
     "evidenceAttachment": "Name the measurement, observation, model, simulation, or source when the status cannot be recovered from local context.",
     "failureBoundary": "Unknown names missing evidence; Unverified names missing verification; Disputed requires actual conflicting evidence."
+  },
+  "statusRelations": {
+    "Observed": [
+      "Measured may accompany an observation when a method produced a value.",
+      "Observed does not imply causal explanation."
+    ],
+    "Measured": [
+      "Measured requires method/time context when not locally explicit.",
+      "Measured does not imply model validity."
+    ],
+    "Inferred": [
+      "Inferred names a conclusion from evidence; name the evidence or derivation when not local."
+    ],
+    "Hypothesis": [
+      "Hypothesis is testable and not established by its label."
+    ],
+    "Model": [
+      "Model claims are conditional on the named model or formal representation."
+    ],
+    "Unverified": [
+      "Unverified means required verification has not occurred; it does not imply conflict."
+    ],
+    "Disputed": [
+      "Disputed requires materially conflicting evidence or authorities."
+    ],
+    "Unknown": [
+      "Unknown identifies missing or inaccessible required evidence."
+    ]
   }
 }
