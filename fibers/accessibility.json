@@ -27,6 +27,16 @@
       "Use the ordinary word when it preserves the technical meaning.",
       "Introduce a required specialist term directly and define it where the audience cannot be expected to know it.",
       "Do not use a reading-level score as a universal quality target."
+    ],
+    "errorsAndStatus": [
+      "State what happened, what object is affected, and the next available action.",
+      "Do not use apology, celebration, or reassurance filler in place of the actual state.",
+      "When an action cannot proceed, distinguish missing information, denied authority, unavailable capacity, validation error, and downstream non-acceptance."
+    ],
+    "denseTerms": [
+      "Expand an internal 561 term at first use when the audience cannot resolve it from the consuming surface.",
+      "Keep the canonical term after expansion so readers and agents can map prose back to the named resource.",
+      "Do not replace a precise internal term with a vague everyday synonym when the distinction matters."
     ]
   },
   "exceptions": [
