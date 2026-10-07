@@ -1,0 +1,36 @@
+{
+  "fiber": "accessibility",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Constrain PTGAE output so written content remains navigable and understandable without deleting necessary technical meaning.",
+  "rules": {
+    "headings": [
+      "Use headings that name the section's actual subject or task.",
+      "Keep heading levels structurally nested; do not use heading level only for visual size.",
+      "Avoid headings whose only content is generic words such as Overview, Information, or Notes when a concrete label is available."
+    ],
+    "links": [
+      "Use link text that identifies the destination or action without relying on surrounding prose.",
+      "Do not use bare 'click here' or 'learn more' when the destination can be named."
+    ],
+    "altText": [
+      "Describe the image information needed for the consuming context.",
+      "Do not restate a filename, asset ID, decorative caption, or nearby prose as alt text.",
+      "Mark decorative images as decorative through the target platform instead of inventing explanatory text."
+    ],
+    "structure": [
+      "Use lists for real enumerations, sequences, options, requirements, or checklists; do not turn every paragraph into bullets.",
+      "Prefer short paragraphs when long dependency chains make the relation between claims hard to follow.",
+      "Keep labels, units, dates, states, and actions explicit in tables and status displays."
+    ],
+    "plainLanguage": [
+      "Use the ordinary word when it preserves the technical meaning.",
+      "Introduce a required specialist term directly and define it where the audience cannot be expected to know it.",
+      "Do not use a reading-level score as a universal quality target."
+    ]
+  },
+  "exceptions": [
+    "Code, formulas, identifiers, formal notation, quoted source, and required legal/technical terms keep their exact surface unless their owning domain changes them.",
+    "Target-language localization follows the target language's conventions rather than English accessibility heuristics that do not transfer."
+  ]
+}
