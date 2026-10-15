@@ -11,7 +11,8 @@
     "Name the acting subject and action when they are known.",
     "Keep failure layers and repair ownership explicit in technical and operational prose.",
     "Preserve unresolved terms as unresolved instead of inventing a gloss.",
-    "When a Leader-Movement work reference is present, preserve that correlation in the generation receipt."
+    "When a Leader-Movement work reference is present, preserve that correlation in the generation receipt.",
+    "For WIT, ACK, ATT and tally collisions, resolve the versioned Science-owned lexical admission profile and supply particular term/sort referents; abstain if unavailable."
   ],
   "forbiddenFamilies": [
     "ritual throat-clearing",
@@ -22,7 +23,9 @@
     "conclusion labels that merely repeat preceding text",
     "generic service-section boilerplate used in place of actual scope",
     "raw-corpus imitation used as evidence of canonical terminology",
-    "dense-term paraphrase that drops canonical distinctions"
+    "dense-term paraphrase that drops canonical distinctions",
+    "Treating WIT/ACK/ATT/tally collision words as authorized synonyms, a generic engagement ladder, or a count inferred from untyped prose.",
+    "Equating a FOUR contested charge with H¹≠0 without a specified cochain complex and computed nontrivial class."
   ],
   "sourcePolicy": {
     "canonicalExamples": [
@@ -48,5 +51,6 @@
       "status"
     ]
   },
-  "boundary": "These constraints govern language form. They do not grant factual, scientific, legal, financial, safety, publication, or product authority."
+  "boundary": "These constraints govern language form. They do not grant factual, scientific, legal, financial, safety, publication, or product authority.",
+  "canonicalProfileRef": "https://github.com/lenticule-science/science-services-section/blob/main/services/social-science-services-section/services/economics-and-business-science-services-section/services/monetary-economics-science-services-section/data/records/wit-ack-att-lexical-admission.json"
 }

@@ -4,11 +4,31 @@
   "language": "en-US",
   "purpose": "Prefer ordinary contemporary General American English where it preserves technical meaning. Resolve dense 561 terms through canonical resources before generation; this lexicon is not a synonym bank.",
   "preferred": [
-    {"insteadOf":"in order to","use":"to","condition":"when meaning is unchanged"},
-    {"insteadOf":"due to the fact that","use":"because","condition":"when stating cause"},
-    {"insteadOf":"has the ability to","use":"can","condition":"when capability is the intended meaning"},
-    {"insteadOf":"at this point in time","use":"now","condition":"when referring to the present"},
-    {"insteadOf":"in the event that","use":"if","condition":"when stating a condition"}
+    {
+      "insteadOf": "in order to",
+      "use": "to",
+      "condition": "when meaning is unchanged"
+    },
+    {
+      "insteadOf": "due to the fact that",
+      "use": "because",
+      "condition": "when stating cause"
+    },
+    {
+      "insteadOf": "has the ability to",
+      "use": "can",
+      "condition": "when capability is the intended meaning"
+    },
+    {
+      "insteadOf": "at this point in time",
+      "use": "now",
+      "condition": "when referring to the present"
+    },
+    {
+      "insteadOf": "in the event that",
+      "use": "if",
+      "condition": "when stating a condition"
+    }
   ],
   "doNotFlatten": [
     "canonical office and service names",
@@ -18,11 +38,30 @@
     "explicit epistemic-status labels",
     "source quotations and identifiers",
     "current Leader Movement work references",
-    "implementation hypotheses that have not been verified as deployed behavior"
+    "implementation hypotheses that have not been verified as deployed behavior",
+    "FOUR WIT cover vs event attestation",
+    "counterparty ACK vs self-certified receipt",
+    "ATT finite budget vs WIT-of-ACK vs time-on-task",
+    "evidence Record tallies vs matched release/admission tally"
   ],
   "semanticDecompression": {
-    "requiredResolutionFields": ["term","termClass","canonicalResource","canonicalRevision","status","shortMeaning","provenance"],
-    "statusValues": ["canonical","current-ref","provisional","deprecated","contested","unresolved"],
+    "requiredResolutionFields": [
+      "term",
+      "termClass",
+      "canonicalResource",
+      "canonicalRevision",
+      "status",
+      "shortMeaning",
+      "provenance"
+    ],
+    "statusValues": [
+      "canonical",
+      "current-ref",
+      "provisional",
+      "deprecated",
+      "contested",
+      "unresolved"
+    ],
     "rules": [
       "Resolve a dense term before expanding it into ordinary prose.",
       "Raw corpus frequency never establishes canonical meaning or house style.",
@@ -40,5 +79,12 @@
     "An implementation hypothesis is not a deployed capability.",
     "A formal mathematical claim keeps its formal status during prose rendering."
   ],
-  "ambiguityPolicy": "When an ordinary synonym would erase a real technical distinction, keep the specialist term and resolve it from its canonical resource. If the resource is unavailable, mark the term unresolved instead of guessing."
+  "ambiguityPolicy": "When an ordinary synonym would erase a real technical distinction, keep the specialist term and resolve it from its canonical resource. If the resource is unavailable, mark the term unresolved instead of guessing.",
+  "canonicalControlledTerms": {
+    "sourceOwner": "lenticule-science/science-services-section",
+    "scienceProfile": "https://github.com/lenticule-science/science-services-section/blob/main/services/social-science-services-section/services/economics-and-business-science-services-section/services/monetary-economics-science-services-section/data/records/wit-ack-att-lexical-admission.json",
+    "mode": "load-by-exact-version-and-provenance",
+    "collisionForms": "review-triggers-not-synonyms",
+    "sourceAbsent": "unresolved; abstain from WIT/ACK/ATT assertion"
+  }
 }
