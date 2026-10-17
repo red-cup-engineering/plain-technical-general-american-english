@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:561:ptgae:fiber-request:0.2.0",
+  "$id": "urn:561:ptgae:fiber-request:0.2.1",
   "title": "PTGAE Fiber Request",
   "type": "object",
   "additionalProperties": false,
@@ -28,37 +28,18 @@
     },
     "locale": {
       "type": "string",
-      "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+      "minLength": 1,
+      "description": "BCP47 syntax is checked with Intl.getCanonicalLocales; source fiber support is verified separately. Schema regex is not a substitute for locale negotiation."
     },
     "register": {
-      "enum": [
-        "executive",
-        "technical",
-        "scientific",
-        "legal-compliance",
-        "public-service",
-        "customer",
-        "product",
-        "media-editorial",
-        "internal-operational"
-      ]
+      "type": "string",
+      "minLength": 1,
+      "description": "Selector matches an actual register ID from the supplied source-owned registers.json fiber; no independently maintained enum."
     },
     "claimStatus": {
-      "enum": [
-        "Observed",
-        "Measured",
-        "Inferred",
-        "Hypothesis",
-        "Model",
-        "Proposed",
-        "Required",
-        "Intended",
-        "Simulated",
-        "Unverified",
-        "Disputed",
-        "Deprecated",
-        "Unknown"
-      ]
+      "type": "string",
+      "minLength": 1,
+      "description": "Selector accepts source fiber claim-status ID (such as observed) or label (such as Observed) and preserves the chosen source status."
     },
     "accessibilityProfile": {
       "type": "string",
