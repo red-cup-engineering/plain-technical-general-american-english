@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:561:ptgae:fiber-bundle:0.1.0",
+  "$id": "urn:561:ptgae:fiber-bundle:0.2.0",
   "title": "PTGAE Selected Fiber Bundle",
   "type": "object",
   "additionalProperties": false,
@@ -168,6 +168,48 @@
           "description": "Optional content hashes for loaded fiber resources when the runtime exposes them."
         }
       }
+    },
+    "termReadings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "locale",
+        "readings",
+        "interpretationAuthority",
+        "sourceIdentityVerified",
+        "evidenceForWorldClaim",
+        "executableEffects"
+      ],
+      "properties": {
+        "kind": {
+          "const": "ptgae.term-reading-projection.v0.1"
+        },
+        "locale": {
+          "type": "string",
+          "minLength": 2
+        },
+        "readings": {
+          "type": "array",
+          "items": {
+            "$ref": "fiber-request.schema.json#/$defs/termResolution"
+          }
+        },
+        "interpretationAuthority": {
+          "const": "caller-asserted"
+        },
+        "sourceIdentityVerified": {
+          "const": false
+        },
+        "evidenceForWorldClaim": {
+          "const": false
+        },
+        "executableEffects": {
+          "type": "array",
+          "maxItems": 0
+        }
+      },
+      "description": "Source-retaining interpretation candidates only, without verified origin or truth charge."
     }
   }
 }
