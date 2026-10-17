@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:561:ptgae:fiber-request:0.1.0",
+  "$id": "urn:561:ptgae:fiber-request:0.2.0",
   "title": "PTGAE Fiber Request",
   "type": "object",
   "additionalProperties": false,
@@ -76,6 +76,78 @@
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "termResolutions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/termResolution"
+      },
+      "description": "Caller-asserted interpretations; may remain ambiguous or unresolved. Never evidence or office authority."
+    }
+  },
+  "$defs": {
+    "termReading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "termId",
+        "sourceRevision"
+      ],
+      "properties": {
+        "termId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceRevision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locale": {
+          "type": "string",
+          "minLength": 2
+        }
+      }
+    },
+    "termResolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "surface",
+        "state"
+      ],
+      "properties": {
+        "surface": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state": {
+          "enum": [
+            "resolved",
+            "ambiguous",
+            "deprecated",
+            "unresolved"
+          ]
+        },
+        "canonicalId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceRevision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "replacementId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "readings": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#/$defs/termReading"
+          }
+        }
+      }
     }
   }
 }
