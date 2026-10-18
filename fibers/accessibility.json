@@ -1,6 +1,6 @@
 {
   "fiber": "accessibility",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "language": "en-US",
   "purpose": "Constrain PTGAE output so written content remains navigable and understandable without deleting necessary technical meaning.",
   "rules": {
@@ -42,5 +42,6 @@
   "exceptions": [
     "Code, formulas, identifiers, formal notation, quoted source, and required legal/technical terms keep their exact surface unless their owning domain changes them.",
     "Target-language localization follows the target language's conventions rather than English accessibility heuristics that do not transfer."
-  ]
+  ],
+  "profileId": "default"
 }
