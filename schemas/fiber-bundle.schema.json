@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:561:ptgae:fiber-bundle:0.2.0",
+  "$id": "urn:561:ptgae:fiber-bundle:0.2.1",
   "title": "PTGAE Selected Fiber Bundle",
   "type": "object",
   "additionalProperties": false,
@@ -40,7 +40,26 @@
           "type": "object"
         },
         "accessibility": {
-          "type": "object"
+          "type": "object",
+          "required": [
+            "language",
+            "version",
+            "profileId"
+          ],
+          "properties": {
+            "language": {
+              "type": "string",
+              "minLength": 2
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "profileId": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
         },
         "sourcePreservation": {
           "type": "object"
@@ -70,16 +89,72 @@
           ]
         },
         "lintRules": {
-          "type": [
-            "array",
-            "null"
-          ]
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "language",
+                "version",
+                "rules"
+              ],
+              "properties": {
+                "language": {
+                  "type": "string",
+                  "minLength": 2
+                },
+                "locale": {
+                  "type": "string",
+                  "minLength": 2
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "rules": {
+                  "type": "array"
+                }
+              }
+            }
+          ],
+          "description": "Source-owned and versioned PTGAE editorial policy; bare unlocalized rule arrays refuse."
         },
         "safeRewriteRules": {
-          "type": [
-            "array",
-            "null"
-          ]
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "language",
+                "version",
+                "rules"
+              ],
+              "properties": {
+                "language": {
+                  "type": "string",
+                  "minLength": 2
+                },
+                "locale": {
+                  "type": "string",
+                  "minLength": 2
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "rules": {
+                  "type": "array"
+                }
+              }
+            }
+          ],
+          "description": "Source-owned and versioned PTGAE editorial policy; bare unlocalized rule arrays refuse."
         },
         "missing": {
           "type": "array",
