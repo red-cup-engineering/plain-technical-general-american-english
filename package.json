@@ -11,5 +11,9 @@
     "./fibers/source-preservation": "./fibers/source-preservation.json",
     "./schemas/fiber-request": "./schemas/fiber-request.schema.json",
     "./schemas/fiber-bundle": "./schemas/fiber-bundle.schema.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/plain-technical-general-american-english.git"
   }
 }
