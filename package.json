@@ -1,6 +1,6 @@
 {
   "name": "@561-group/plain-technical-general-american-english",
-  "version": "0.1.0",
+  "version": "0.1.1-dev.0",
   "private": true,
   "type": "module",
   "description": "Versioned PTGAE language fibers for the 561 language engine.",
@@ -10,7 +10,8 @@
     "./fibers/accessibility": "./fibers/accessibility.json",
     "./fibers/source-preservation": "./fibers/source-preservation.json",
     "./schemas/fiber-request": "./schemas/fiber-request.schema.json",
-    "./schemas/fiber-bundle": "./schemas/fiber-bundle.schema.json"
+    "./schemas/fiber-bundle": "./schemas/fiber-bundle.schema.json",
+    "./fibers/safe-rewrite-rules": "./fibers/safe-rewrite-rules.json"
   },
   "repository": {
     "type": "git",
