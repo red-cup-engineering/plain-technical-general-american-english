@@ -159,9 +159,20 @@
         "missing": {
           "type": "array",
           "items": {
-            "type": "string"
+            "enum": [
+              "lexicon",
+              "terminology",
+              "localization",
+              "generationConstraints",
+              "syntaxDirectness",
+              "surfaceForm",
+              "corpusCanonicality",
+              "lintRules",
+              "safeRewriteRules"
+            ]
           },
-          "description": "Requested or normative fibers not loaded for this selection. Missing resources stay explicit."
+          "description": "Names of absent optional source-owned linguistic fibers. The selector keeps corresponding named fields null and the receipt names the same absence.",
+          "uniqueItems": true
         },
         "syntaxDirectness": {
           "type": [
@@ -225,9 +236,21 @@
         },
         "missingFibers": {
           "type": "array",
+          "uniqueItems": true,
           "items": {
-            "type": "string"
-          }
+            "enum": [
+              "lexicon",
+              "terminology",
+              "localization",
+              "generationConstraints",
+              "syntaxDirectness",
+              "surfaceForm",
+              "corpusCanonicality",
+              "lintRules",
+              "safeRewriteRules"
+            ]
+          },
+          "description": "Exact optional language fibers absent from this resolved selection, never silently treated as conformance"
         },
         "warnings": {
           "type": "array",
@@ -241,6 +264,18 @@
             "type": "string"
           },
           "description": "Optional content hashes for loaded fiber resources when the runtime exposes them."
+        },
+        "fiberCoverage": {
+          "enum": [
+            "complete",
+            "partial"
+          ],
+          "description": "Complete means every named optional linguistic fiber is present. Partial means at least one is missing; neither state establishes linguistic, scientific, publication, or source-identity authority"
+        },
+        "selectionHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "RFC8785 canonical digest of the resolved request hash, parsed resource-content hashes, fiber coverage, missing names and bundle version. Explicit selection identity excluding selectedAt, not source authenticity"
         }
       }
     },
