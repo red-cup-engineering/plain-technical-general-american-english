@@ -7,7 +7,7 @@
       "id": "quotation",
       "defaultAction": "preserve",
       "rules": [
-        "Do not rewrite quoted source as house prose.",
+        "Do not rewrite quoted source as group prose.",
         "A translation or quotation correction is a separate operation with source/version provenance."
       ]
     },
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "id": "ordinary-house-prose",
+      "id": "ordinary-group-prose",
       "defaultAction": "analyze-and-allow-listed-rewrite",
       "rules": [
         "Only semantics-preserving transformations authorized by the selected PTGAE bundle may run automatically.",

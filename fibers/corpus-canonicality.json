@@ -6,8 +6,8 @@
   "states": {
     "canonical": "Ratified language resource or terminology source for new generation.",
     "accepted": "Reviewed content accepted for its owning use; eligible as an exemplar only inside that scope.",
-    "generatedDraft": "Machine-produced text not yet accepted; never a house-style authority.",
-    "quotedSource": "Source voice preserved for evidence; not house prose.",
+    "generatedDraft": "Machine-produced text not yet accepted; never a group-style authority.",
+    "quotedSource": "Source voice preserved for evidence; not group prose.",
     "deprecated": "Retained for provenance but excluded from new canonical generation.",
     "unknown": "Canonicality has not been established."
   },
