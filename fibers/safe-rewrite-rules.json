@@ -1,0 +1,27 @@
+{
+  "fiber": "safe-rewrite-rules",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Version the existing PTGAE rewrite service's two strictly review-only proposal rules so consumers can refuse an absent or conflicting selected policy.",
+  "rules": [
+    {
+      "ruleId": "PTG004",
+      "action": "propose-for-review",
+      "sourcePhrase": "in order to",
+      "candidatePhrase": "to",
+      "contextReview": "Check that the infinitive continues to express the source purpose.",
+      "automaticApplicationAllowed": false
+    },
+    {
+      "ruleId": "PTG010",
+      "action": "propose-for-review",
+      "sourcePhrase": "due to the fact that",
+      "candidatePhrase": "because",
+      "contextReview": "Check that the replacement does not strengthen, introduce or misstate causality.",
+      "automaticApplicationAllowed": false
+    }
+  ],
+  "sourcePreservation": "Protected quotations, code, identifiers, frontmatter and source evidence remain untouched under the source-owning preservation fiber.",
+  "boundary": "This fiber constrains review proposals from the existing PTGAE prose rewrite implementation. Its presence does not establish English grammar membership, semantic equivalence, factual truth, authenticated source custody, editorial approval, or publication rights.",
+  "executableEffects": []
+}
