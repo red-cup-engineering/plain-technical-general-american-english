@@ -1,0 +1,325 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:561:ptgae:fiber-bundle:0.2.1",
+  "title": "PTGAE Selected Fiber Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bundleVersion",
+    "request",
+    "selectedAt",
+    "fibers",
+    "receipt"
+  ],
+  "properties": {
+    "bundleVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request": {
+      "$ref": "fiber-request.schema.json"
+    },
+    "selectedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "fibers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claimStatus",
+        "register",
+        "accessibility",
+        "sourcePreservation"
+      ],
+      "properties": {
+        "claimStatus": {
+          "type": "object"
+        },
+        "register": {
+          "type": "object"
+        },
+        "accessibility": {
+          "type": "object",
+          "required": [
+            "language",
+            "version",
+            "profileId"
+          ],
+          "properties": {
+            "language": {
+              "type": "string",
+              "minLength": 2
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "profileId": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "sourcePreservation": {
+          "type": "object"
+        },
+        "lexicon": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "terminology": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "localization": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "generationConstraints": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "lintRules": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "language",
+                "version",
+                "rules"
+              ],
+              "properties": {
+                "language": {
+                  "type": "string",
+                  "minLength": 2
+                },
+                "locale": {
+                  "type": "string",
+                  "minLength": 2
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "rules": {
+                  "type": "array"
+                }
+              }
+            }
+          ],
+          "description": "Source-owned and versioned PTGAE editorial policy; bare unlocalized rule arrays refuse."
+        },
+        "safeRewriteRules": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "language",
+                "version",
+                "rules"
+              ],
+              "properties": {
+                "language": {
+                  "type": "string",
+                  "minLength": 2
+                },
+                "locale": {
+                  "type": "string",
+                  "minLength": 2
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "rules": {
+                  "type": "array"
+                }
+              }
+            }
+          ],
+          "description": "Source-owned and versioned PTGAE editorial policy; bare unlocalized rule arrays refuse."
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "lexicon",
+              "terminology",
+              "localization",
+              "generationConstraints",
+              "syntaxDirectness",
+              "surfaceForm",
+              "corpusCanonicality",
+              "lintRules",
+              "safeRewriteRules"
+            ]
+          },
+          "description": "Names of absent optional source-owned linguistic fibers. The selector keeps corresponding named fields null and the receipt names the same absence.",
+          "uniqueItems": true
+        },
+        "syntaxDirectness": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "surfaceForm": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "corpusCanonicality": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bundleVersion",
+        "fiberVersions",
+        "requestHash"
+      ],
+      "properties": {
+        "bundleVersion": {
+          "type": "string"
+        },
+        "fiberVersions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "requestHash": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exceptionsApplied": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceCanonicality": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "terminologyVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "missingFibers": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "lexicon",
+              "terminology",
+              "localization",
+              "generationConstraints",
+              "syntaxDirectness",
+              "surfaceForm",
+              "corpusCanonicality",
+              "lintRules",
+              "safeRewriteRules"
+            ]
+          },
+          "description": "Exact optional language fibers absent from this resolved selection, never silently treated as conformance"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resourceHashes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Optional content hashes for loaded fiber resources when the runtime exposes them."
+        },
+        "fiberCoverage": {
+          "enum": [
+            "complete",
+            "partial"
+          ],
+          "description": "Complete means every named optional linguistic fiber is present. Partial means at least one is missing; neither state establishes linguistic, scientific, publication, or source-identity authority"
+        },
+        "selectionHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "RFC8785 canonical digest of the resolved request hash, parsed resource-content hashes, fiber coverage, missing names and bundle version. Explicit selection identity excluding selectedAt, not source authenticity"
+        }
+      }
+    },
+    "termReadings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "locale",
+        "readings",
+        "interpretationAuthority",
+        "sourceIdentityVerified",
+        "evidenceForWorldClaim",
+        "executableEffects"
+      ],
+      "properties": {
+        "kind": {
+          "const": "ptgae.term-reading-projection.v0.1"
+        },
+        "locale": {
+          "type": "string",
+          "minLength": 2
+        },
+        "readings": {
+          "type": "array",
+          "items": {
+            "$ref": "fiber-request.schema.json#/$defs/termResolution"
+          }
+        },
+        "interpretationAuthority": {
+          "const": "caller-asserted"
+        },
+        "sourceIdentityVerified": {
+          "const": false
+        },
+        "evidenceForWorldClaim": {
+          "const": false
+        },
+        "executableEffects": {
+          "type": "array",
+          "maxItems": 0
+        }
+      },
+      "description": "Source-retaining interpretation candidates only, without verified origin or truth charge."
+    }
+  }
+}

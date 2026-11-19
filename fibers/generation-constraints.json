@@ -1,0 +1,56 @@
+{
+  "fiber": "generation-constraints",
+  "version": "0.2.0",
+  "language": "en-US",
+  "purpose": "Constrain PTGAE generation so direct technical prose is produced before post-generation cleanup.",
+  "required": [
+    "State the proposition before ceremonial caveats.",
+    "Resolve dense 561 terms from canonical resources before expanding them into ordinary prose.",
+    "Use canonical terminology resources rather than imitating frequent raw-corpus wording.",
+    "Encode material epistemic status with the selected claim-status fiber.",
+    "Name the acting subject and action when they are known.",
+    "Keep failure layers and repair ownership explicit in technical and operational prose.",
+    "Preserve unresolved terms as unresolved instead of inventing a gloss.",
+    "When a Leader-Movement work reference is present, preserve that correlation in the generation receipt.",
+    "For WIT, ACK, ATT and tally collisions, resolve the versioned Science-owned lexical admission profile and supply particular term/sort referents; abstain if unavailable."
+  ],
+  "forbiddenFamilies": [
+    "ritual throat-clearing",
+    "stacked uncertainty markers",
+    "generic balanced-opposition framing",
+    "managerial abstraction without an actor or effect",
+    "generic significance claims without evidence",
+    "conclusion labels that merely repeat preceding text",
+    "generic service-section boilerplate used in place of actual scope",
+    "raw-corpus imitation used as evidence of canonical terminology",
+    "dense-term paraphrase that drops canonical distinctions",
+    "Treating WIT/ACK/ATT/tally collision words as authorized synonyms, a generic engagement ladder, or a count inferred from untyped prose.",
+    "Equating a FOUR contested charge with H¹≠0 without a specified cochain complex and computed nontrivial class."
+  ],
+  "sourcePolicy": {
+    "canonicalExamples": [
+      "accepted PTGAE resources",
+      "reviewed exemplars",
+      "canonical terminology",
+      "canonical Leader-Movement resources when rendering Leader-directed prose"
+    ],
+    "excludeFromGroupStyleLearning": [
+      "unreviewed generated drafts",
+      "known tonal-poison examples",
+      "deprecated terminology outside provenance",
+      "frequent but unratified boilerplate"
+    ]
+  },
+  "semanticDecompression": {
+    "requiredBeforeGeneration": true,
+    "failureMode": "Keep the dense term and mark it unresolved. Do not infer a definition from frequency or nearby prose.",
+    "receiptFields": [
+      "term",
+      "canonicalResource",
+      "canonicalRevision",
+      "status"
+    ]
+  },
+  "boundary": "These constraints govern language form. They do not grant factual, scientific, legal, financial, safety, publication, or product authority.",
+  "canonicalProfileRef": "https://github.com/lenticule-science/science-services-section/blob/main/services/social-science-services-section/services/economics-and-business-science-services-section/services/monetary-economics-science-services-section/data/records/wit-ack-att-lexical-admission.json"
+}

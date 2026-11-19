@@ -1,0 +1,35 @@
+{
+  "fiber": "surface-form",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Define PTGAE spelling, capitalization, punctuation, number, date, unit, heading, and quotation defaults for ordinary technical prose.",
+  "spelling": [
+    "Use contemporary General American spelling unless a quoted source, proper name, standard, API, or target locale requires another form.",
+    "Do not normalize spelling inside quotations, code, identifiers, citations, titles, or formal notation."
+  ],
+  "capitalization": [
+    "Capitalize official office, organization, product, program, and service names according to their canonical records.",
+    "Use sentence case for ordinary headings unless an owning publication surface defines another convention.",
+    "Do not capitalize common nouns merely to make them sound institutional."
+  ],
+  "punctuation": [
+    "Use punctuation to expose sentence structure, not to create dramatic tone.",
+    "Prefer a period when a long dash or semicolon does not encode a useful relation.",
+    "Use a colon before a compact definition, list, consequence, or claim-status rendering when it improves parsing.",
+    "Avoid repeated exclamation marks and decorative ellipses in technical, scientific, executive, and operational prose."
+  ],
+  "numbersDatesUnits": [
+    "Use digits for measurements, versions, counts, dates, times, money, percentages, and identifiers unless an owning publication convention requires words.",
+    "Attach units to measured values and name the measurement context when needed.",
+    "Use ISO 8601 dates in machine-facing resources and unambiguous month-name dates in ordinary external prose when that surface requires readability.",
+    "Include time zone or UTC offset when the time could affect execution or interpretation."
+  ],
+  "headings": [
+    "Use headings that name the actual subject, decision, operation, or result.",
+    "Avoid generic headings such as Overview, Information, Notes, or Conclusion when a concrete heading is available."
+  ],
+  "quotations": [
+    "Preserve source wording and quotation boundaries.",
+    "Corrections, translations, and normalizations of quoted text are separate operations with provenance."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "fiber": "lexicon",
+  "version": "0.2.1",
+  "language": "en-US",
+  "purpose": "Prefer ordinary contemporary General American English where it preserves technical meaning. Resolve dense 561 terms through canonical resources before generation; this lexicon is not a synonym bank.",
+  "preferred": [
+    {
+      "insteadOf": "in order to",
+      "use": "to",
+      "condition": "when meaning is unchanged"
+    },
+    {
+      "insteadOf": "due to the fact that",
+      "use": "because",
+      "condition": "when stating cause"
+    },
+    {
+      "insteadOf": "has the ability to",
+      "use": "can",
+      "condition": "when capability is the intended meaning"
+    },
+    {
+      "insteadOf": "at this point in time",
+      "use": "now",
+      "condition": "when referring to the present"
+    },
+    {
+      "insteadOf": "in the event that",
+      "use": "if",
+      "condition": "when stating a condition"
+    }
+  ],
+  "doNotFlatten": [
+    "canonical office and service names",
+    "formal mathematical or protocol terms",
+    "legal defined terms and operative modal verbs",
+    "measurement units and named methods",
+    "explicit epistemic-status labels",
+    "source quotations and identifiers",
+    "current Leader Movement work references",
+    "implementation hypotheses that have not been verified as deployed behavior",
+    "FOUR WIT cover vs event attestation",
+    "counterparty ACK vs self-certified receipt",
+    "ATT finite budget vs WIT-of-ACK vs time-on-task",
+    "evidence Record tallies vs matched release/admission tally"
+  ],
+  "semanticDecompression": {
+    "requiredResolutionFields": [
+      "term",
+      "termClass",
+      "canonicalResource",
+      "canonicalRevision",
+      "status",
+      "shortMeaning",
+      "provenance"
+    ],
+    "statusValues": [
+      "canonical",
+      "current-ref",
+      "provisional",
+      "deprecated",
+      "contested",
+      "unresolved"
+    ],
+    "rules": [
+      "Resolve a dense term before expanding it into ordinary prose.",
+      "Raw corpus frequency never establishes canonical meaning or house style.",
+      "Preserve the canonical term when its technical distinction matters, then explain it at first consequential use.",
+      "Keep deprecated aliases as provenance and search keys; do not generate them as current canonical prose.",
+      "If a term cannot be resolved, mark it unresolved and keep the term instead of inventing a definition."
+    ],
+    "movementWorkRef": "ni:///sha-256;VoimIhOnHfvbRe3Qei3Vgrneu2RCOSxJKNMpCzZ0UY4",
+    "servesAim": "ni:///sha-256;rnXJn9KLi_aZCeRBKm9tYs92kjMuNVluA4fbmCrsujU"
+  },
+  "invariants": [
+    "A semantic gloss is not a substitute for its canonical source.",
+    "A service office is not the same thing as the institutional body that contains it.",
+    "A governance decision is not the same thing as a scientific claim.",
+    "An implementation hypothesis is not a deployed capability.",
+    "A formal mathematical claim keeps its formal status during prose rendering."
+  ],
+  "ambiguityPolicy": "When an ordinary synonym would erase a real technical distinction, keep the specialist term and resolve it from its canonical resource. If the resource is unavailable, mark the term unresolved instead of guessing.",
+  "canonicalControlledTerms": {
+    "sourceOwner": "lenticule-science/science-services-section",
+    "scienceProfile": "https://github.com/lenticule-science/science-services-section/blob/main/services/social-science-services-section/services/economics-and-business-science-services-section/services/monetary-economics-science-services-section/data/records/wit-ack-att-lexical-admission.json",
+    "mode": "load-by-exact-version-and-provenance",
+    "collisionForms": "review-triggers-not-synonyms",
+    "sourceAbsent": "unresolved; abstain from WIT/ACK/ATT assertion"
+  }
+}

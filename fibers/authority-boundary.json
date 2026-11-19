@@ -1,0 +1,43 @@
+{
+  "fiber": "authority-boundary",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Keep clear language from silently changing who has authority over the proposition or effect.",
+  "boundaries": [
+    {
+      "domain": "language-system",
+      "cro": "May validate terminology, directness, register, accessibility, source preservation, and deterministic rewrite conformance.",
+      "owner": "Content Resource Office"
+    },
+    {
+      "domain": "scientific",
+      "cro": "May clarify wording without changing scientific meaning or status.",
+      "owner": "CSO / owning Lenticule Science office"
+    },
+    {
+      "domain": "legal-contractual",
+      "cro": "May clarify structure while preserving defined terms, scope, rights, duties, and operative modality.",
+      "owner": "Legal/compliance authority"
+    },
+    {
+      "domain": "financial",
+      "cro": "May clarify financial prose without changing figures, assumptions, accounting treatment, or decision authority.",
+      "owner": "CFO / owning finance office"
+    },
+    {
+      "domain": "public-publication",
+      "cro": "May prepare or validate prose; publication remains a separate effect.",
+      "owner": "Owning public, media, product, or publishing office"
+    },
+    {
+      "domain": "localization",
+      "cro": "May bind source/terminology/locale requirements; target-language meaning needs the qualified localization receiver.",
+      "owner": "Localization/target-language receiver"
+    }
+  ],
+  "rules": [
+    "A clearer sentence does not upgrade Proposed to Required, Unverified to Observed, or draft to accepted.",
+    "When a rewrite would alter a factual proposition, obligation, right, measurement, causal claim, safety instruction, or defined term, stop automatic rewriting and route the semantic change.",
+    "A language review receipt is not a publication receipt."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@561-group/plain-technical-general-american-english",
+  "version": "0.1.2-dev.0",
+  "type": "module",
+  "description": "Versioned PTGAE language fibers for the 561 language engine.",
+  "exports": {
+    "./fibers/claim-status": "./fibers/claim-status.json",
+    "./fibers/registers": "./fibers/registers.json",
+    "./fibers/accessibility": "./fibers/accessibility.json",
+    "./fibers/source-preservation": "./fibers/source-preservation.json",
+    "./schemas/fiber-request": "./schemas/fiber-request.schema.json",
+    "./schemas/fiber-bundle": "./schemas/fiber-bundle.schema.json",
+    "./fibers/safe-rewrite-rules": "./fibers/safe-rewrite-rules.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/plain-technical-general-american-english.git"
+  },
+  "license": "MIT",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
+  }
+}

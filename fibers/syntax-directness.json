@@ -1,0 +1,25 @@
+{
+  "fiber": "syntax-directness",
+  "version": "0.1.0",
+  "language": "en-US",
+  "purpose": "Make the proposition, actor, action, condition, and consequence easy to recover from the sentence.",
+  "rules": [
+    "State the main proposition before commentary about the act of stating it.",
+    "Name the actor and action when known.",
+    "Prefer a direct verb over a noun phrase that hides the action.",
+    "Keep causal and temporal order explicit.",
+    "Split long dependency chains when doing so preserves relations more clearly.",
+    "Use passive voice when the actor is unknown, irrelevant, or the affected object must lead; do not use it to hide a known responsible actor.",
+    "Put material conditions next to the proposition they limit.",
+    "Use one uncertainty mechanism for one uncertainty unless two independent uncertainties actually differ."
+  ],
+  "antiPatterns": [
+    "it is important to note",
+    "it is worth noting",
+    "one possible approach could be",
+    "this represents a significant",
+    "this does not necessarily mean",
+    "generic conclusion transitions",
+    "generic balanced-opposition framing without a decision or evidence distinction"
+  ]
+}
